@@ -8,7 +8,7 @@ import time
 from pathlib import Path
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from moonshine_voice import (
     ModelArch,
     Transcriber,
@@ -143,8 +143,8 @@ def shutdown() -> None:
 
 
 @app.get("/")
-def root() -> JSONResponse:
-    raise HTTPException(status_code=404, detail="Not found")
+def root() -> RedirectResponse:
+    return RedirectResponse(url=f"{getattr(app.state, 'public_path', _public_path())}/", status_code=302)
 
 
 @app.get(f"{_public_path()}/healthz")
