@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+public_path = "/m-${hash:16}"
+
+[config]
+[[config.domains]]
+serviceName = "moonshine"
+port = 8000
+host = "${main_domain}"
+path = "${public_path}"
+
+[config.env]
+MOONSHINE_LANGUAGE = "en"
+MOONSHINE_MODEL_CHOICE = "tiny-streaming"
+MOONSHINE_PUBLIC_PATH = "${public_path}"
+MOONSHINE_CACHE_ROOT = "/models"

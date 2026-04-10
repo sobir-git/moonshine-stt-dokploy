@@ -1,0 +1,16 @@
+services:
+  moonshine:
+    build: .
+    restart: unless-stopped
+    environment:
+      MOONSHINE_LANGUAGE: "en"
+      MOONSHINE_MODEL_CHOICE: "tiny-streaming"
+      MOONSHINE_PUBLIC_PATH: "${MOONSHINE_PUBLIC_PATH}"
+      MOONSHINE_CACHE_ROOT: "/models"
+    volumes:
+      - moonshine-models:/models
+    expose:
+      - "8000"
+
+volumes:
+  moonshine-models: {}
