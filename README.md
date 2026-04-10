@@ -29,6 +29,8 @@ If you want the Base64 import string, run:
 python3 scripts/make_payload.py
 ```
 
+If you just want the raw string without running anything, copy it from [`payload.txt`](./payload.txt).
+
 ## Included Files
 
 - `blueprints/moonshine-stt/docker-compose.yml`
@@ -39,6 +41,7 @@ python3 scripts/make_payload.py
 - `meta.json`
 - `moonshine.png`
 - `scripts/make_payload.py`
+- `payload.txt`
 
 ## Notes
 
