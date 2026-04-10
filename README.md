@@ -23,10 +23,10 @@ Reusable Dokploy blueprint for self-hosted CPU speech-to-text.
 
 Use the repo root as a normal Dokploy Git app:
 
-- build context: repo root
-- Dockerfile: `Dockerfile`
-- exposed port: `8000`
+- service type: Docker Compose from Git
+- file: `docker-compose.yml`
 - auto deploy: on
+- exposed port: `8000`
 
 That gives you the loop you want:
 
@@ -67,7 +67,7 @@ If you just want the raw string without running anything, copy it from [`payload
 
 The Base64 payload imports the compose file into Dokploy. That compose file points to a published image in GHCR, so Dokploy does not need to see the Dockerfile during import.
 
-For Git deploys, Dokploy uses the root `Dockerfile`, which copies the app files from `blueprints/moonshine-stt/`.
+For Git deploys, Dokploy uses the root `docker-compose.yml`, which builds from the root `Dockerfile` and copies the app files from `blueprints/moonshine-stt/`.
 
 ## Notes
 

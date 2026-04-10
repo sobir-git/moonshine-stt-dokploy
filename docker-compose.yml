@@ -1,0 +1,18 @@
+services:
+  moonshine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      MOONSHINE_LANGUAGE: "en"
+      MOONSHINE_MODEL_CHOICE: "tiny-streaming"
+      MOONSHINE_PUBLIC_PATH: "/m"
+      MOONSHINE_CACHE_ROOT: "/models"
+    volumes:
+      - moonshine-models:/models
+    expose:
+      - "8000"
+
+volumes:
+  moonshine-models: {}
