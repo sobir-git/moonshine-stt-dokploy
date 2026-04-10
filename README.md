@@ -3,6 +3,7 @@
 [![Docker](https://img.shields.io/badge/docker-ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![Dokploy](https://img.shields.io/badge/Dokploy-template-111827)](https://dokploy.com/)
 [![Moonshine](https://img.shields.io/badge/Moonshine-Voice%20STT-7dd3fc)](https://github.com/moonshine-ai/moonshine)
+[![Deploy to Dokploy](https://img.shields.io/badge/Deploy%20to-Dokploy-0ea5e9?logo=cloudflare&logoColor=white)](https://docs.dokploy.com/docs/templates/jenkins)
 
 Reusable Dokploy blueprint for self-hosted CPU speech-to-text.
 
