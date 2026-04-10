@@ -1,6 +1,6 @@
 services:
   moonshine:
-    build: .
+    image: ghcr.io/sobir-git/moonshine-stt-dokploy/moonshine:main
     restart: unless-stopped
     environment:
       MOONSHINE_LANGUAGE: "en"

@@ -14,6 +14,7 @@ Reusable Dokploy blueprint for self-hosted CPU speech-to-text.
 - microphone recorder
 - model picker
 - hidden random path routing for Dokploy
+- a published GHCR image so Dokploy-only users do not need the source repo at deploy time
 
 ## Dokploy Import
 
@@ -42,6 +43,10 @@ If you just want the raw string without running anything, copy it from [`payload
 - `moonshine.png`
 - `scripts/make_payload.py`
 - `payload.txt`
+
+## How it works
+
+The Base64 payload imports the compose file into Dokploy. That compose file points to a published image in GHCR, so Dokploy does not need to see the Dockerfile during import.
 
 ## Notes
 
