@@ -23,6 +23,12 @@ Dokploy will generate a hidden path like:
 
 `/m-<random>`
 
+If you want the Base64 import string, run:
+
+```bash
+python3 scripts/make_payload.py
+```
+
 ## Included Files
 
 - `blueprints/moonshine-stt/docker-compose.yml`
@@ -32,6 +38,7 @@ Dokploy will generate a hidden path like:
 - `blueprints/moonshine-stt/requirements.txt`
 - `meta.json`
 - `moonshine.png`
+- `scripts/make_payload.py`
 
 ## Notes
 
