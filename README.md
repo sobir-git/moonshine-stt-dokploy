@@ -14,9 +14,28 @@ Reusable Dokploy blueprint for self-hosted CPU speech-to-text.
 - microphone recorder
 - model picker
 - hidden random path routing for Dokploy
+- a root-level Dockerfile so Dokploy can build straight from Git for fast dev loops
 - a published GHCR image so Dokploy-only users do not need the source repo at deploy time
 
-## Dokploy Import
+## Two ways to use it
+
+### 1. Fast Git deploy
+
+Use the repo root as a normal Dokploy Git app:
+
+- build context: repo root
+- Dockerfile: `Dockerfile`
+- exposed port: `8000`
+- auto deploy: on
+
+That gives you the loop you want:
+
+1. push a commit
+2. Dokploy rebuilds from Git
+3. click redeploy or let auto deploy do it
+4. your update is live
+
+### 2. Dokploy template import
 
 Import the `blueprints/moonshine-stt` folder as a template blueprint.
 
@@ -47,6 +66,8 @@ If you just want the raw string without running anything, copy it from [`payload
 ## How it works
 
 The Base64 payload imports the compose file into Dokploy. That compose file points to a published image in GHCR, so Dokploy does not need to see the Dockerfile during import.
+
+For Git deploys, Dokploy uses the root `Dockerfile`, which copies the app files from `blueprints/moonshine-stt/`.
 
 ## Notes
 

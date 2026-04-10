@@ -1,0 +1,12 @@
+.git
+.github
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+.DS_Store
+payload.txt
+moonshine.png
+meta.json
+scripts/
+README.md
