@@ -1,32 +1,39 @@
 # Moonshine STT Dokploy Template
 
+[![Docker](https://img.shields.io/badge/docker-ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Dokploy](https://img.shields.io/badge/Dokploy-template-111827)](https://dokploy.com/)
+[![Moonshine](https://img.shields.io/badge/Moonshine-Voice%20STT-7dd3fc)](https://github.com/moonshine-ai/moonshine)
+
 Reusable Dokploy blueprint for self-hosted CPU speech-to-text.
 
-Features:
+## What it gives you
 
-- Moonshine Voice STT
+- Moonshine Voice STT on CPU
 - browser upload UI
 - microphone recorder
 - model picker
-- hidden random path
+- hidden random path routing for Dokploy
 
-## Use in Dokploy
+## Dokploy Import
 
 Import the `blueprints/moonshine-stt` folder as a template blueprint.
 
-The generated deployment will route to a hidden path under a random domain, for example:
+Dokploy will generate a hidden path like:
 
 `/m-<random>`
 
-## What’s included
+## Included Files
 
-- `docker-compose.yml`
-- `template.toml`
-- `Dockerfile`
-- `app.py`
-- `requirements.txt`
-- `moonshine.svg`
+- `blueprints/moonshine-stt/docker-compose.yml`
+- `blueprints/moonshine-stt/template.toml`
+- `blueprints/moonshine-stt/Dockerfile`
+- `blueprints/moonshine-stt/app.py`
+- `blueprints/moonshine-stt/requirements.txt`
+- `meta.json`
+- `moonshine.png`
 
 ## Notes
 
-The blueprint is designed for Dokploy’s built-in domain and TLS handling. It does not define its own reverse proxy.
+- The blueprint uses Dokploy’s built-in domain and TLS handling.
+- It does not define its own reverse proxy.
+- You can change the generated path by editing `blueprints/moonshine-stt/template.toml`.

@@ -2,7 +2,7 @@
   "id": "moonshine-stt",
   "name": "Moonshine STT",
   "version": "1.0.0",
-  "description": "Self-hosted Moonshine Voice speech-to-text with a browser UI, recorder, and model picker.",
+  "description": "Self-hosted Moonshine Voice speech-to-text for CPU boxes, with a browser UI, recorder, model picker, and Dokploy template.",
   "logo": "moonshine.png",
   "links": {
     "github": "https://github.com/sobir-git/moonshine-stt-dokploy",
@@ -13,6 +13,7 @@
     "ai",
     "speech-to-text",
     "self-hosted",
-    "dokploy"
+    "dokploy",
+    "cpu"
   ]
 }

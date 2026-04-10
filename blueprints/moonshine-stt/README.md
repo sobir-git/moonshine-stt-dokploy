@@ -1,11 +1,14 @@
 # Moonshine STT
 
-CPU-friendly self-hosted speech-to-text with:
+Moonshine Voice on CPU, packaged for Dokploy.
 
-- Moonshine Voice
-- a browser UI with upload + microphone recorder
-- a model picker
-- hidden path routing for Dokploy
+## Features
+
+- browser upload UI
+- microphone recorder
+- model picker
+- hidden path routing
+- Docker-friendly build
 
 ## Dokploy
 
